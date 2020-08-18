@@ -36,8 +36,8 @@ resource "yandex_kubernetes_node_group" "worker-node" {
     nat         = true
 
     resources {
-      memory = var.cores
-      cores  = var.memory
+      memory = var.memory
+      cores  = var.cores
     }
 
     boot_disk {

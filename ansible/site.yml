@@ -34,7 +34,7 @@
     # Развернуть сам контейнер
     - name: docker hello
       docker_container:
-        name: hello-v1
+        name: "hello-{{ version }}"
         image: "maniaque/hello:{{ version }}"
         restart_policy: unless-stopped
         published_ports:
