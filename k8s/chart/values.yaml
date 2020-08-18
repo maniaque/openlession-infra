@@ -1,0 +1,7 @@
+ingress: true
+
+container:
+  port: 80
+
+service:
+  port: 80

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-{{ .Chart.Version }}-deployment
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+      version: {{ .Chart.Version }}
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+        version: {{ .Chart.Version }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: maniaque/hello:{{ .Chart.AppVersion }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: {{ .Values.container.port }}

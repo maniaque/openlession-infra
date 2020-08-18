@@ -1,0 +1,11 @@
+--- mandatory.yaml   2020-02-08 19:23:15.436725881 +0300
++++ mandatory.yaml   2020-02-08 15:19:45.741694060 +0300
+@@ -215,6 +215,7 @@
+       serviceAccountName: nginx-ingress-serviceaccount
+       nodeSelector:
+         kubernetes.io/os: linux
++      hostNetwork: true
+       containers:
+         - name: nginx-ingress-controller
+           image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
+

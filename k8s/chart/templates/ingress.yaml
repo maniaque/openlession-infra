@@ -1,0 +1,3 @@
+{{ if .Values.ingress }}
+{{- template "ingress" .}}
+{{ end }}
